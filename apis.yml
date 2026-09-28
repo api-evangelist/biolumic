@@ -1,23 +1,65 @@
 aid: biolumic
+
 name: Biolumic
-description: 'Biolumic is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: http://static1.squarespace.com/static/5b7b502dfcf7fd913d0cc338/t/5cf09ada6451800001206edd/1782417760389/Screen+Shot+2019-05-31+at+3.07.49+pm.png?format=1500w
+
+description: 'BioLumic develops UV light technology to improve plant growth, sustainability and crop yields. Leveraging photobiology, the company creates innovative lighting solutions for agriculture, enhancing photosynthesis efficiency and reducing resource use. Based in New Zealand, BioLumic serves global agritech markets with science‑driven products and services aimed at sustainable food production.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biolumic/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
+- Agriculture
+- Photobiology
+- SustainableTech
+- NewZealand
+- UVLighting
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/biolumic-hosts.yml
+- type: Vendors
+  url: vendors/biolumic-vendors.yml
+- type: Newsroom
+  url: https://www.biolumic.com/headlines/category/Press
+- type: DomainSecurity
+  url: security/biolumic-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biolumic
+  url: https://www.biolumic.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found on the provider's hosts.
+  evidence:
+    - url: https://api.biolumic.com/openapi.json
+      status: 404
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
